@@ -2,765 +2,106 @@
 <html lang="bn">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>হরিনহাটি আদর্শ বিদ্যানিকেতন</title>
-
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>হরিনহাটি আদর্শ বিদ্যানিকেতন | Official Website</title>
+<meta name="description" content="হরিনহাটি আদর্শ বিদ্যানিকেতন - শিক্ষা, শৃঙ্খলা ও নৈতিকতার সমন্বয়ে আদর্শ শিক্ষাঙ্গন।">
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,"Noto Sans Bengali",sans-serif;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    background:#f4f7fb;
-    color:#222;
-}
-
-/* HEADER */
-
-header{
-    background:#063b7a;
-    color:white;
-    padding:15px 6%;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    position:sticky;
-    top:0;
-    z-index:1000;
-}
-
-.logo{
-    font-size:21px;
-    font-weight:bold;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    margin-left:18px;
-    font-weight:bold;
-}
-
-.login-btn{
-    background:#0a9b5b;
-    padding:9px 15px;
-    border-radius:6px;
-}
-
-/* HERO */
-
-.hero{
-    min-height:520px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    color:white;
-    padding:30px;
-
-    background:
-    linear-gradient(rgba(0,45,95,.72),rgba(0,45,95,.72)),
-    url("https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1600&q=80");
-
-    background-size:cover;
-    background-position:center;
-}
-
-.hero h1{
-    font-size:45px;
-    margin-bottom:15px;
-}
-
-.hero p{
-    max-width:750px;
-    margin:auto;
-    font-size:19px;
-}
-
-.btn{
-    display:inline-block;
-    margin:22px 5px;
-    padding:12px 22px;
-    background:#0a9b5b;
-    color:white;
-    text-decoration:none;
-    border-radius:7px;
-}
-
-/* SECTIONS */
-
-section{
-    padding:60px 7%;
-}
-
-.title{
-    text-align:center;
-    color:#063b7a;
-    margin-bottom:35px;
-}
-
-/* CARDS */
-
-.cards{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:22px;
-}
-
-.card{
-    background:white;
-    padding:25px;
-    border-radius:12px;
-    box-shadow:0 4px 15px rgba(0,0,0,.08);
-}
-
-.card h3{
-    color:#063b7a;
-    margin-bottom:10px;
-}
-
-/* NOTICE */
-
-.notice{
-    background:white;
-}
-
-.notice-item{
-    padding:15px;
-    margin:12px 0;
-    background:#f4f7fb;
-    border-left:5px solid #0a9b5b;
-}
-
-/* LOGIN */
-
-.login-section{
-    background:#eaf2fa;
-}
-
-.login-box{
-    max-width:450px;
-    margin:auto;
-    background:white;
-    padding:30px;
-    border-radius:15px;
-    box-shadow:0 5px 25px rgba(0,0,0,.15);
-}
-
-.login-box h2{
-    text-align:center;
-    color:#063b7a;
-    margin-bottom:20px;
-}
-
-input{
-    width:100%;
-    padding:13px;
-    margin:8px 0 15px;
-    border:1px solid #ccd5df;
-    border-radius:7px;
-    font-size:16px;
-}
-
-button{
-    width:100%;
-    padding:13px;
-    border:0;
-    border-radius:7px;
-    background:#063b7a;
-    color:white;
-    font-size:16px;
-    cursor:pointer;
-}
-
-.error{
-    margin-top:12px;
-    color:#b00020;
-    text-align:center;
-}
-
-.success{
-    color:green;
-    text-align:center;
-}
-
-/* DASHBOARD */
-
-#dashboard{
-    display:none;
-    background:#f4f7fb;
-}
-
-.dashboard-box{
-    max-width:1000px;
-    margin:auto;
-}
-
-.student-info{
-    background:#063b7a;
-    color:white;
-    padding:25px;
-    border-radius:12px;
-    margin-bottom:25px;
-}
-
-.dashboard-cards{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
-
-.dashboard-card{
-    background:white;
-    padding:25px;
-    border-radius:12px;
-    box-shadow:0 3px 15px rgba(0,0,0,.08);
-}
-
-.dashboard-card h3{
-    color:#063b7a;
-}
-
-.logout{
-    background:#c62828;
-}
-
-/* CONTACT */
-
-.contact{
-    background:#eaf2fa;
-}
-
-/* FOOTER */
-
-footer{
-    background:#062c59;
-    color:white;
-    text-align:center;
-    padding:35px 10px;
-}
-
-/* MOBILE */
-
-@media(max-width:800px){
-
-    header{
-        flex-direction:column;
-        gap:12px;
-    }
-
-    nav a{
-        margin:5px;
-        font-size:14px;
-    }
-
-    .hero h1{
-        font-size:32px;
-    }
-
-    .cards,
-    .dashboard-cards{
-        grid-template-columns:1fr;
-    }
-
-    section{
-        padding:45px 5%;
-    }
-}
+:root{--nav:#073b78;--nav2:#052b58;--green:#079455;--gold:#f5b335;--bg:#f4f7fb;--ink:#172033;--muted:#667085;--white:#fff;--danger:#c62828;--line:#e5e7eb}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,"Noto Sans Bengali",sans-serif;background:var(--bg);color:var(--ink);line-height:1.65}button,input,textarea,select{font:inherit}a{text-decoration:none;color:inherit}
+.top{background:var(--nav2);color:#fff;padding:7px 5%;display:flex;justify-content:space-between;font-size:13px}.header{background:#fff;padding:13px 5%;display:flex;align-items:center;justify-content:space-between;gap:20px;position:sticky;top:0;z-index:50;box-shadow:0 2px 12px #0001}.brand{display:flex;align-items:center;gap:12px}.logo{width:58px;height:58px;border-radius:50%;background:var(--nav);color:#fff;display:grid;place-items:center;text-align:center;font-size:11px;font-weight:800}.brand h1{margin:0;color:var(--nav);font-size:22px}.brand small{color:var(--muted)}.nav{display:flex;gap:3px;flex-wrap:wrap;justify-content:flex-end}.nav a{padding:8px 10px;border-radius:6px;font-size:13px;font-weight:700}.nav a:hover{background:var(--nav);color:#fff}.nav .login{background:var(--green);color:#fff}
+.ticker{display:flex;background:#fff;border-bottom:1px solid var(--line)}.ticker b{background:#dc3545;color:#fff;padding:7px 15px;white-space:nowrap}.ticker marquee{padding:7px 10px}
+.hero{min-height:490px;display:grid;place-items:center;text-align:center;color:#fff;padding:50px 7%;background:linear-gradient(90deg,#032c5bdd,#073b7899),url("https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1800&q=85") center/cover}.hero h2{font-size:46px;margin:0 0 12px}.hero p{max-width:820px;font-size:19px;margin:auto}.btn{display:inline-block;border:0;border-radius:7px;padding:11px 18px;background:var(--green);color:#fff;font-weight:700;cursor:pointer;margin:7px 3px}.btn.alt{background:#fff;color:var(--nav)}.btn.danger{background:var(--danger)}
+section{padding:58px 6%}.title{text-align:center;color:var(--nav);margin:0 0 30px}.title:after{content:"";display:block;width:65px;height:4px;background:var(--green);margin:8px auto}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{background:#fff;border-radius:13px;padding:23px;box-shadow:0 4px 18px #0000000d}.card h3{color:var(--nav);margin-top:0}.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;background:var(--nav);color:#fff;padding:35px 6%;text-align:center}.facts strong{display:block;font-size:31px}.notice-table{width:100%;border-collapse:collapse;background:#fff;border-radius:10px;overflow:hidden}.notice-table th,.notice-table td{padding:12px;border-bottom:1px solid var(--line);text-align:left}.notice-table th{background:var(--nav);color:#fff}.principal{max-width:1050px;margin:auto;display:grid;grid-template-columns:210px 1fr;gap:30px;align-items:center}.photo{height:240px;border-radius:13px;background:#e7ecf2;display:grid;place-items:center;color:#667085;text-align:center}.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.gallery div{height:180px;border-radius:10px;background:#dce4ed center/cover}.g1{background-image:url("https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=800&q=85")}.g2{background-image:url("https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=800&q=85")}.g3{background-image:url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=800&q=85")}.g4{background-image:url("https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=800&q=85")}
+.auth{background:#eaf2fa}.box{max-width:460px;margin:auto;background:#fff;padding:28px;border-radius:14px;box-shadow:0 7px 25px #0002}.box input,.admin input,.admin textarea,.admin select{width:100%;padding:12px;border:1px solid #ccd5df;border-radius:7px;margin:6px 0 13px}.msg{display:none;padding:10px;border-radius:7px;margin-top:10px}.ok{background:#e7fff1;color:#087443}.err{background:#ffe8e8;color:#a00000}
+#dashboard,#adminPanel{display:none}.dashHead{background:linear-gradient(110deg,var(--nav),#0a719f);color:#fff;padding:25px;border-radius:14px;margin-bottom:20px}.dashgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.dashcard{background:#fff;border-radius:12px;padding:21px;box-shadow:0 3px 15px #0001}.dashcard h3{color:var(--nav)}.profileLine{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding:7px 0}
+.adminWrap{max-width:1000px;margin:auto}.adminTools{display:grid;grid-template-columns:1fr 1fr;gap:15px}.adminList{padding:0}.adminList li{list-style:none;background:#f5f7fb;margin:8px 0;padding:10px;border-radius:7px;display:flex;justify-content:space-between;gap:10px}
+footer{background:var(--nav2);color:#fff;padding:38px 6%}.footgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:25px}.copy{text-align:center;border-top:1px solid #ffffff33;padding-top:15px;margin-top:25px}
+@media(max-width:850px){.header{align-items:flex-start}.nav{max-width:480px}.grid3,.dashgrid{grid-template-columns:1fr 1fr}.gallery{grid-template-columns:1fr 1fr}.facts{grid-template-columns:1fr 1fr}.principal{grid-template-columns:1fr}.footgrid{grid-template-columns:1fr}}
+@media(max-width:560px){.top{display:none}.header{position:static}.brand h1{font-size:16px}.brand small{font-size:10px}.nav a{font-size:11px;padding:6px}.hero h2{font-size:31px}.hero p{font-size:16px}.grid3,.dashgrid,.gallery,.facts,.adminTools{grid-template-columns:1fr}.notice-table{font-size:12px}.notice-table th,.notice-table td{padding:8px}}
 </style>
 </head>
-
 <body>
-
-<!-- HEADER -->
-
-<header>
-
-<div class="logo">
-🏫 হরিনহাটি আদর্শ বিদ্যানিকেতন
-</div>
-
-<nav>
-<a href="#home">হোম</a>
-<a href="#about">বিদ্যালয়</a>
-<a href="#academic">একাডেমিক</a>
-<a href="#notice">নোটিশ</a>
-<a href="#contact">যোগাযোগ</a>
-<a class="login-btn" href="#login">🔐 Student Login</a>
-</nav>
-
+<div class="top"><span>শিক্ষা • শৃঙ্খলা • নৈতিকতা</span><span>📞 <span id="topPhone">01XXXXXXXXX</span> | ✉ <span id="topEmail">school@example.com</span></span></div>
+<header class="header">
+<div class="brand"><div class="logo">হরিনহাটি<br>আদর্শ</div><div><h1>হরিনহাটি আদর্শ বিদ্যানিকেতন</h1><small>আলোকিত মানুষ গড়ার প্রত্যয়ে</small></div></div>
+<nav class="nav"><a href="#home">হোম</a><a href="#about">বিদ্যালয়</a><a href="#academic">একাডেমিক</a><a href="#notice">নোটিশ</a><a href="#gallery">গ্যালারি</a><a href="#contact">যোগাযোগ</a><a class="login" href="#login">🔐 Student Login</a></nav>
 </header>
+<div class="ticker"><b>NEWS</b><marquee id="ticker">বিদ্যালয়ের গুরুত্বপূর্ণ খবর এখানে প্রকাশ হবে।</marquee></div>
 
+<section class="hero" id="home"><div><h2>হরিনহাটি আদর্শ বিদ্যানিকেতন</h2><p>জ্ঞান, নৈতিকতা, শৃঙ্খলা ও মানবিক মূল্যবোধে শিক্ষার্থীদের গড়ে তোলার একটি আধুনিক শিক্ষাঙ্গন।</p><a class="btn" href="#about">বিদ্যালয় সম্পর্কে</a><a class="btn alt" href="#login">Student Login</a></div></section>
 
-<!-- HOME -->
+<section id="about"><h2 class="title">আমাদের বিদ্যালয়</h2><div class="grid3">
+<div class="card"><h3>📚 মানসম্মত শিক্ষা</h3><p>পাঠ্যজ্ঞান, সৃজনশীলতা ও বাস্তবভিত্তিক শেখার সমন্বয়।</p></div>
+<div class="card"><h3>👨‍🏫 শিক্ষকবৃন্দ</h3><p>নিয়মিত পাঠদান, মূল্যায়ন ও শিক্ষার্থীবান্ধব দিকনির্দেশনা।</p></div>
+<div class="card"><h3>🏆 সহশিক্ষা কার্যক্রম</h3><p>খেলাধুলা, সংস্কৃতি, বিজ্ঞান, বিতর্ক ও সৃজনশীল কার্যক্রম।</p></div>
+</div></section>
 
-<section class="hero" id="home">
+<div class="facts"><div><strong id="factStudents">--</strong>শিক্ষার্থী</div><div><strong id="factTeachers">--</strong>শিক্ষক</div><div><strong id="factClasses">--</strong>শ্রেণি</div><div><strong id="factYears">--</strong>বছরের ঐতিহ্য</div></div>
 
-<div>
+<section id="academic"><h2 class="title">একাডেমিক ও তথ্যসেবা</h2><div class="grid3">
+<div class="card"><h3>📅 রুটিন</h3><p>শ্রেণিভিত্তিক ক্লাস রুটিন প্রকাশ করা যাবে।</p></div><div class="card"><h3>📊 ফলাফল</h3><p>Student Dashboard-এ শিক্ষার্থীর ফলাফল দেখানো যাবে।</p></div><div class="card"><h3>📥 E-Library</h3><p>PDF, নোট ও শিক্ষাসামগ্রী যুক্ত করা যাবে।</p></div>
+<div class="card"><h3>📝 ভর্তি</h3><p>ভর্তি বিজ্ঞপ্তি ও আবেদন নির্দেশনা প্রকাশ করা যাবে।</p></div><div class="card"><h3>🏫 শিক্ষক ডিরেক্টরি</h3><p>শিক্ষকদের নাম, পদবি ও বিষয় যুক্ত করা যাবে।</p></div><div class="card"><h3>📆 একাডেমিক ক্যালেন্ডার</h3><p>পরীক্ষা, ছুটি ও অনুষ্ঠানগুলোর তথ্য দেওয়া যাবে।</p></div>
+</div></section>
 
-<h1>হরিনহাটি আদর্শ বিদ্যানিকেতন</h1>
+<section id="notice"><h2 class="title">📢 Notice Board</h2><table class="notice-table"><thead><tr><th>#</th><th>বিষয়</th><th>তারিখ</th><th>দেখুন</th></tr></thead><tbody id="noticeRows"></tbody></table></section>
 
-<p>
-জ্ঞান, নৈতিকতা, শৃঙ্খলা ও মানবিক মূল্যবোধে
-শিক্ষার্থীদের গড়ে তোলাই আমাদের লক্ষ্য।
-</p>
+<section><h2 class="title">প্রধান শিক্ষকের বার্তা</h2><div class="principal"><div class="photo">প্রধান শিক্ষকের<br>ছবি এখানে বসান</div><div><h2>শুভেচ্ছা</h2><p>শিক্ষা শুধু পরীক্ষার ফল নয়; জ্ঞান, নৈতিকতা ও দায়িত্ববোধের বিকাশই একটি আদর্শ শিক্ষার লক্ষ্য। আমাদের প্রত্যাশা, শিক্ষার্থীরা ভবিষ্যতে দেশ ও সমাজের জন্য যোগ্য নাগরিক হিসেবে গড়ে উঠবে।</p><b>— প্রধান শিক্ষক</b></div></div></section>
 
-<a class="btn" href="#about">
-বিদ্যালয় সম্পর্কে
-</a>
+<section id="gallery"><h2 class="title">🏫 Campus & Gallery</h2><div class="gallery"><div class="g1"></div><div class="g2"></div><div class="g3"></div><div class="g4"></div></div></section>
 
-<a class="btn" href="#login">
-Student Login
-</a>
+<section class="auth" id="login"><h2 class="title">🔐 Student Login</h2><div class="box"><label>Student ID</label><input id="sid" placeholder="যেমন: HVA001"><label>Password</label><input id="spass" type="password" placeholder="Password"><button class="btn" style="width:100%" onclick="login()">LOGIN</button><div id="loginMsg" class="msg"></div><p style="font-size:12px;color:#667085">Demo: HVA001 / 123456</p></div></section>
 
-</div>
+<section id="dashboard"><div class="dashHead"><h2>🎓 Student Dashboard</h2><p>স্বাগতম, <b id="dName"></b> | ID: <b id="dId"></b></p></div><div class="dashgrid">
+<div class="dashcard"><h3>👤 My Profile</h3><div class="profileLine"><span>ID</span><b id="pId"></b></div><div class="profileLine"><span>Class</span><b id="pClass"></b></div><div class="profileLine"><span>Roll</span><b id="pRoll"></b></div></div>
+<div class="dashcard"><h3>📊 My Result</h3><p>ফলাফল প্রকাশ হলে এখানে দেখাবে।</p></div><div class="dashcard"><h3>📅 My Routine</h3><p>তোমার ক্লাস রুটিন এখানে থাকবে।</p></div><div class="dashcard"><h3>📢 Student Notice</h3><p>শিক্ষার্থীদের জন্য ব্যক্তিগত নোটিশ।</p></div><div class="dashcard"><h3>📚 Study Materials</h3><p>PDF ও নোটের তালিকা এখানে রাখা যাবে।</p></div><div class="dashcard"><h3>🚪 Logout</h3><button class="btn danger" style="width:100%" onclick="logout()">Logout</button></div>
+</div></section>
 
-</section>
+<section id="admin"><h2 class="title">⚙️ School Content Manager</h2><div class="card adminWrap">
+<p><b>এটি Starter/Demo manager.</b> GitHub Pages-এ নিরাপদ multi-user admin করতে Firebase/Firestore লাগবে।</p>
+<label>Admin PIN</label><input id="apin" type="password" placeholder="Demo PIN: 2468"><button class="btn" onclick="unlockAdmin()">Unlock</button>
+<div id="adminPanel" class="admin" style="display:none"><hr><div class="adminTools"><div><label>Notice</label><input id="nt" placeholder="নতুন Notice"><label>Date</label><input id="nd" type="date"></div><div><label>School Phone</label><input id="phone" placeholder="01XXXXXXXXX"><label>School Email</label><input id="email" placeholder="school@example.com"></div></div><button class="btn" onclick="addNotice()">Notice Add</button><button class="btn" onclick="saveContact()">Contact Save</button><h3>Notices</h3><ul id="adminList" class="adminList"></ul></div></div></section>
 
-
-<!-- ABOUT -->
-
-<section id="about">
-
-<h2 class="title">
-🏫 আমাদের বিদ্যালয়
-</h2>
-
-<div class="cards">
-
-<div class="card">
-
-<h3>📚 মানসম্মত শিক্ষা</h3>
-
-<p>
-শিক্ষার্থীদের জ্ঞান, সৃজনশীলতা ও
-বাস্তবভিত্তিক শেখার সুযোগ দেওয়া।
-</p>
-
-</div>
-
-
-<div class="card">
-
-<h3>👨‍🏫 শিক্ষকবৃন্দ</h3>
-
-<p>
-শিক্ষার্থীদের নিয়মিত পাঠদান,
-পরামর্শ ও দিকনির্দেশনা।
-</p>
-
-</div>
-
-
-<div class="card">
-
-<h3>🏆 সহশিক্ষা কার্যক্রম</h3>
-
-<p>
-খেলাধুলা, সংস্কৃতি, বিতর্ক ও
-বিভিন্ন সৃজনশীল কার্যক্রম।
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ACADEMIC -->
-
-<section id="academic">
-
-<h2 class="title">
-📚 একাডেমিক কার্যক্রম
-</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>📅 ক্লাস রুটিন</h3>
-<p>শিক্ষার্থীদের ক্লাসের সময়সূচি।</p>
-</div>
-
-<div class="card">
-<h3>📊 পরীক্ষার ফলাফল</h3>
-<p>শিক্ষার্থীদের পরীক্ষার ফলাফল।</p>
-</div>
-
-<div class="card">
-<h3>📥 স্টাডি ম্যাটেরিয়াল</h3>
-<p>PDF এবং অন্যান্য শিক্ষাসামগ্রী।</p>
-</div>
-
-</div>
-
-</section>
-
-
-<!-- NOTICE -->
-
-<section class="notice" id="notice">
-
-<h2 class="title">
-📢 নোটিশ বোর্ড
-</h2>
-
-<div class="notice-item">
-📌 বিদ্যালয়ের গুরুত্বপূর্ণ নোটিশ এখানে প্রকাশ করা হবে।
-</div>
-
-<div class="notice-item">
-📌 পরীক্ষার সময়সূচি এখানে প্রকাশ করা হবে।
-</div>
-
-<div class="notice-item">
-📌 ভর্তি সংক্রান্ত বিজ্ঞপ্তি এখানে প্রকাশ করা হবে।
-</div>
-
-</section>
-
-
-<!-- LOGIN -->
-
-<section class="login-section" id="login">
-
-<div class="login-box">
-
-<h2>
-🔐 Student Login
-</h2>
-
-<p style="text-align:center;margin-bottom:15px;">
-শুধুমাত্র অনুমোদিত শিক্ষার্থীরা প্রবেশ করতে পারবে।
-</p>
-
-<label>
-Student ID
-</label>
-
-<input
-id="studentID"
-type="text"
-placeholder="যেমন: HVA001"
->
-
-<label>
-Password
-</label>
-
-<input
-id="studentPassword"
-type="password"
-placeholder="Password"
->
-
-<button onclick="studentLogin()">
-LOGIN
-</button>
-
-<div id="loginMessage"></div>
-
-</div>
-
-</section>
-
-
-<!-- DASHBOARD -->
-
-<section id="dashboard">
-
-<div class="dashboard-box">
-
-<div class="student-info">
-
-<h2>
-🎓 Student Dashboard
-</h2>
-
-<p>
-স্বাগতম, <strong id="studentName"></strong>
-</p>
-
-<p>
-Student ID:
-<strong id="studentIDShow"></strong>
-</p>
-
-</div>
-
-
-<div class="dashboard-cards">
-
-<div class="dashboard-card">
-
-<h3>👤 আমার প্রোফাইল</h3>
-
-<p>
-Student ID:
-<span id="profileID"></span>
-</p>
-
-<p>
-Class: দশম
-</p>
-
-</div>
-
-
-<div class="dashboard-card">
-
-<h3>📊 আমার ফলাফল</h3>
-
-<p>
-তোমার পরীক্ষার ফলাফল এখানে প্রকাশ করা হবে।
-</p>
-
-</div>
-
-
-<div class="dashboard-card">
-
-<h3>📅 আমার রুটিন</h3>
-
-<p>
-তোমার ক্লাস রুটিন এখানে প্রকাশ করা হবে।
-</p>
-
-</div>
-
-
-<div class="dashboard-card">
-
-<h3>📢 Student Notice</h3>
-
-<p>
-শিক্ষার্থীদের জন্য বিশেষ নোটিশ এখানে থাকবে।
-</p>
-
-</div>
-
-
-<div class="dashboard-card">
-
-<h3>📚 Study Materials</h3>
-
-<p>
-PDF ও অন্যান্য শিক্ষাসামগ্রী এখানে দেওয়া যাবে।
-</p>
-
-</div>
-
-
-<div class="dashboard-card">
-
-<h3>🚪 Logout</h3>
-
-<button class="logout" onclick="logout()">
-Logout
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- CONTACT -->
-
-<section class="contact" id="contact">
-
-<h2 class="title">
-📞 যোগাযোগ
-</h2>
-
-<div class="card">
-
-<p>
-<strong>বিদ্যালয়ের নাম:</strong>
-হরিনহাটি আদর্শ বিদ্যানিকেতন
-</p>
-
-<p>
-<strong>ঠিকানা:</strong>
-হরিনহাটি, বাংলাদেশ
-</p>
-
-<p>
-<strong>ফোন:</strong>
-01XXXXXXXXX
-</p>
-
-<p>
-<strong>Email:</strong>
-school@example.com
-</p>
-
-</div>
-
-</section>
-
-
-<!-- FOOTER -->
-
-<footer>
-
-<p>
-© 2026 হরিনহাটি আদর্শ বিদ্যানিকেতন
-</p>
-
-<p>
-সর্বস্বত্ব সংরক্ষিত
-</p>
-
-</footer>
-
+<footer id="contact"><div class="footgrid"><div><h2>হরিনহাটি আদর্শ বিদ্যানিকেতন</h2><p>জ্ঞান, নৈতিকতা ও মানবিক মূল্যবোধে শিক্ষার্থীদের গড়ে তোলাই আমাদের লক্ষ্য।</p></div><div><h3>Quick Links</h3><p><a href="#notice">Notice</a></p><p><a href="#academic">Academic</a></p><p><a href="#gallery">Gallery</a></p></div><div><h3>যোগাযোগ</h3><p>হরিনহাটি, বাংলাদেশ</p><p id="footPhone">01XXXXXXXXX</p><p id="footEmail">school@example.com</p></div></div><div class="copy">© 2026 হরিনহাটি আদর্শ বিদ্যানিকেতন — সর্বস্বত্ব সংরক্ষিত।</div></footer>
 
 <script>
+/* ===== SCHOOL SETTINGS: নিজের তথ্য এখানে বদলাতে পারো ===== */
+const SCHOOL={name:"হরিনহাটি আদর্শ বিদ্যানিকেতন",phone:"01XXXXXXXXX",email:"school@example.com",students:"--",teachers:"--",classes:"--",years:"--"};
 
-/*
-====================================================
-DEMO STUDENT ACCOUNTS
-====================================================
-
-এখানে শুধু উদাহরণ হিসেবে ৩টি account দেওয়া হয়েছে।
-
-HVA001 / 123456
-HVA002 / 123456
-HVA003 / 123456
-
-গুরুত্বপূর্ণ:
-এটি DEMO LOGIN।
-Production website-এর জন্য Firebase Authentication ব্যবহার করুন।
-====================================================
-*/
-
-const students = {
-
-    "HVA001":{
-        password:"123456",
-        name:"Student 001"
-    },
-
-    "HVA002":{
-        password:"123456",
-        name:"Student 002"
-    },
-
-    "HVA003":{
-        password:"123456",
-        name:"Student 003"
-    }
-
+/* ===== DEMO STUDENTS: REAL SCHOOL-USE-এর জন্য Firebase Authentication ব্যবহার করো ===== */
+const students={
+ HVA001:{password:"123456",name:"Student 001",class:"দশম",roll:"001"},
+ HVA002:{password:"123456",name:"Student 002",class:"দশম",roll:"002"},
+ HVA003:{password:"123456",name:"Student 003",class:"নবম",roll:"003"}
 };
 
+let notices=JSON.parse(localStorage.getItem("hns_notices")||"null")||[
+ {t:"বিদ্যালয়ের গুরুত্বপূর্ণ নোটিশ",d:"2026-09-22"},
+ {t:"পরীক্ষার সময়সূচি প্রকাশ",d:"2026-09-20"},
+ {t:"ভর্তি সংক্রান্ত বিজ্ঞপ্তি",d:"2026-09-15"}
+];
 
-function studentLogin(){
-
-    let id =
-        document.getElementById("studentID")
-        .value
-        .trim()
-        .toUpperCase();
-
-    let password =
-        document.getElementById("studentPassword")
-        .value;
-
-    let message =
-        document.getElementById("loginMessage");
-
-
-    if(id === "" || password === ""){
-
-        message.className="error";
-
-        message.innerHTML=
-        "⚠️ Student ID এবং Password দিন।";
-
-        return;
-    }
-
-
-    if(
-        students[id] &&
-        students[id].password === password
-    ){
-
-        message.className="success";
-
-        message.innerHTML=
-        "✅ Login সফল হয়েছে।";
-
-
-        document.getElementById("studentName")
-        .innerText=students[id].name;
-
-
-        document.getElementById("studentIDShow")
-        .innerText=id;
-
-
-        document.getElementById("profileID")
-        .innerText=id;
-
-
-        document.getElementById("dashboard")
-        .style.display="block";
-
-
-        document.getElementById("dashboard")
-        .scrollIntoView({
-            behavior:"smooth"
-        });
-
-    }
-
-    else{
-
-        message.className="error";
-
-        message.innerHTML=
-        "❌ Student ID অথবা Password ভুল।";
-
-    }
-
+function $(id){return document.getElementById(id)}
+function render(){
+ $("noticeRows").innerHTML=notices.map((n,i)=>`<tr><td>${i+1}</td><td>${esc(n.t)}</td><td>${esc(n.d)}</td><td><button onclick="alert('${esc(n.t)}')">View</button></td></tr>`).join("");
+ $("ticker").textContent=notices.map(n=>n.t).join(" • ");
+ $("adminList").innerHTML=notices.map((n,i)=>`<li><span>${esc(n.t)} — ${esc(n.d)}</span><button onclick="removeNotice(${i})">Delete</button></li>`).join("");
+ $("topPhone").textContent=SCHOOL.phone;$("topEmail").textContent=SCHOOL.email;$("footPhone").textContent=SCHOOL.phone;$("footEmail").textContent=SCHOOL.email;
+ $("factStudents").textContent=SCHOOL.students;$("factTeachers").textContent=SCHOOL.teachers;$("factClasses").textContent=SCHOOL.classes;$("factYears").textContent=SCHOOL.years;
 }
-
-
-function logout(){
-
-    document.getElementById("dashboard")
-    .style.display="none";
-
-
-    document.getElementById("studentID")
-    .value="";
-
-
-    document.getElementById("studentPassword")
-    .value="";
-
-
-    document.getElementById("login")
-    .scrollIntoView({
-        behavior:"smooth"
-    });
-
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]))}
+function login(){
+ const id=$("sid").value.trim().toUpperCase(),pass=$("spass").value,m=$("loginMsg"),s=students[id];
+ if(s&&s.password===pass){
+  $("dName").textContent=s.name;$("dId").textContent=id;$("pId").textContent=id;$("pClass").textContent=s.class;$("pRoll").textContent=s.roll;
+  $("dashboard").style.display="block";m.className="msg ok";m.style.display="block";m.textContent="Login সফল হয়েছে।";$("dashboard").scrollIntoView({behavior:"smooth"});
+ }else{m.className="msg err";m.style.display="block";m.textContent="Student ID অথবা Password সঠিক নয়।"}
 }
-
+function logout(){$("dashboard").style.display="none";$("sid").value="";$("spass").value="";location.hash="login"}
+function unlockAdmin(){if($("apin").value==="2468")$("adminPanel").style.display="block";else alert("ভুল Admin PIN")}
+function addNotice(){const t=$("nt").value.trim(),d=$("nd").value||new Date().toISOString().slice(0,10);if(!t)return alert("Notice লিখুন");notices.unshift({t,d});localStorage.setItem("hns_notices",JSON.stringify(notices));$("nt").value="";render()}
+function removeNotice(i){notices.splice(i,1);localStorage.setItem("hns_notices",JSON.stringify(notices));render()}
+function saveContact(){const p=$("phone").value.trim(),e=$("email").value.trim();if(p)SCHOOL.phone=p;if(e)SCHOOL.email=e;render();alert("এই browser-এ contact update হয়েছে।")}
+render();
 </script>
-
 </body>
-  </html>
+</html>
