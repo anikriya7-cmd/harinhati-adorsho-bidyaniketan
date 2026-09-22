@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>হরিনহাটি আদর্শ বিদ্যানিকেতন</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,"Noto Sans Bengali",sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f4f7fb;
+    color:#222;
+}
+
+/* HEADER */
+
+header{
+    background:#063b7a;
+    color:white;
+    padding:15px 6%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:21px;
+    font-weight:bold;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:18px;
+    font-weight:bold;
+}
+
+.login-btn{
+    background:#0a9b5b;
+    padding:9px 15px;
+    border-radius:6px;
+}
+
+/* HERO */
+
+.hero{
+    min-height:520px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:30px;
+
+    background:
+    linear-gradient(rgba(0,45,95,.72),rgba(0,45,95,.72)),
+    url("https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1600&q=80");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero h1{
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    max-width:750px;
+    margin:auto;
+    font-size:19px;
+}
+
+.btn{
+    display:inline-block;
+    margin:22px 5px;
+    padding:12px 22px;
+    background:#0a9b5b;
+    color:white;
+    text-decoration:none;
+    border-radius:7px;
+}
+
+/* SECTIONS */
+
+section{
+    padding:60px 7%;
+}
+
+.title{
+    text-align:center;
+    color:#063b7a;
+    margin-bottom:35px;
+}
+
+/* CARDS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+.card h3{
+    color:#063b7a;
+    margin-bottom:10px;
+}
+
+/* NOTICE */
+
+.notice{
+    background:white;
+}
+
+.notice-item{
+    padding:15px;
+    margin:12px 0;
+    background:#f4f7fb;
+    border-left:5px solid #0a9b5b;
+}
+
+/* LOGIN */
+
+.login-section{
+    background:#eaf2fa;
+}
+
+.login-box{
+    max-width:450px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 25px rgba(0,0,0,.15);
+}
+
+.login-box h2{
+    text-align:center;
+    color:#063b7a;
+    margin-bottom:20px;
+}
+
+input{
+    width:100%;
+    padding:13px;
+    margin:8px 0 15px;
+    border:1px solid #ccd5df;
+    border-radius:7px;
+    font-size:16px;
+}
+
+button{
+    width:100%;
+    padding:13px;
+    border:0;
+    border-radius:7px;
+    background:#063b7a;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.error{
+    margin-top:12px;
+    color:#b00020;
+    text-align:center;
+}
+
+.success{
+    color:green;
+    text-align:center;
+}
+
+/* DASHBOARD */
+
+#dashboard{
+    display:none;
+    background:#f4f7fb;
+}
+
+.dashboard-box{
+    max-width:1000px;
+    margin:auto;
+}
+
+.student-info{
+    background:#063b7a;
+    color:white;
+    padding:25px;
+    border-radius:12px;
+    margin-bottom:25px;
+}
+
+.dashboard-cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.dashboard-card{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 3px 15px rgba(0,0,0,.08);
+}
+
+.dashboard-card h3{
+    color:#063b7a;
+}
+
+.logout{
+    background:#c62828;
+}
+
+/* CONTACT */
+
+.contact{
+    background:#eaf2fa;
+}
+
+/* FOOTER */
+
+footer{
+    background:#062c59;
+    color:white;
+    text-align:center;
+    padding:35px 10px;
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+    header{
+        flex-direction:column;
+        gap:12px;
+    }
+
+    nav a{
+        margin:5px;
+        font-size:14px;
+    }
+
+    .hero h1{
+        font-size:32px;
+    }
+
+    .cards,
+    .dashboard-cards{
+        grid-template-columns:1fr;
+    }
+
+    section{
+        padding:45px 5%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="logo">
+🏫 হরিনহাটি আদর্শ বিদ্যানিকেতন
+</div>
+
+<nav>
+<a href="#home">হোম</a>
+<a href="#about">বিদ্যালয়</a>
+<a href="#academic">একাডেমিক</a>
+<a href="#notice">নোটিশ</a>
+<a href="#contact">যোগাযোগ</a>
+<a class="login-btn" href="#login">🔐 Student Login</a>
+</nav>
+
+</header>
+
+
+<!-- HOME -->
+
+<section class="hero" id="home">
+
+<div>
+
+<h1>হরিনহাটি আদর্শ বিদ্যানিকেতন</h1>
+
+<p>
+জ্ঞান, নৈতিকতা, শৃঙ্খলা ও মানবিক মূল্যবোধে
+শিক্ষার্থীদের গড়ে তোলাই আমাদের লক্ষ্য।
+</p>
+
+<a class="btn" href="#about">
+বিদ্যালয় সম্পর্কে
+</a>
+
+<a class="btn" href="#login">
+Student Login
+</a>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<h2 class="title">
+🏫 আমাদের বিদ্যালয়
+</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>📚 মানসম্মত শিক্ষা</h3>
+
+<p>
+শিক্ষার্থীদের জ্ঞান, সৃজনশীলতা ও
+বাস্তবভিত্তিক শেখার সুযোগ দেওয়া।
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>👨‍🏫 শিক্ষকবৃন্দ</h3>
+
+<p>
+শিক্ষার্থীদের নিয়মিত পাঠদান,
+পরামর্শ ও দিকনির্দেশনা।
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>🏆 সহশিক্ষা কার্যক্রম</h3>
+
+<p>
+খেলাধুলা, সংস্কৃতি, বিতর্ক ও
+বিভিন্ন সৃজনশীল কার্যক্রম।
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ACADEMIC -->
+
+<section id="academic">
+
+<h2 class="title">
+📚 একাডেমিক কার্যক্রম
+</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>📅 ক্লাস রুটিন</h3>
+<p>শিক্ষার্থীদের ক্লাসের সময়সূচি।</p>
+</div>
+
+<div class="card">
+<h3>📊 পরীক্ষার ফলাফল</h3>
+<p>শিক্ষার্থীদের পরীক্ষার ফলাফল।</p>
+</div>
+
+<div class="card">
+<h3>📥 স্টাডি ম্যাটেরিয়াল</h3>
+<p>PDF এবং অন্যান্য শিক্ষাসামগ্রী।</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- NOTICE -->
+
+<section class="notice" id="notice">
+
+<h2 class="title">
+📢 নোটিশ বোর্ড
+</h2>
+
+<div class="notice-item">
+📌 বিদ্যালয়ের গুরুত্বপূর্ণ নোটিশ এখানে প্রকাশ করা হবে।
+</div>
+
+<div class="notice-item">
+📌 পরীক্ষার সময়সূচি এখানে প্রকাশ করা হবে।
+</div>
+
+<div class="notice-item">
+📌 ভর্তি সংক্রান্ত বিজ্ঞপ্তি এখানে প্রকাশ করা হবে।
+</div>
+
+</section>
+
+
+<!-- LOGIN -->
+
+<section class="login-section" id="login">
+
+<div class="login-box">
+
+<h2>
+🔐 Student Login
+</h2>
+
+<p style="text-align:center;margin-bottom:15px;">
+শুধুমাত্র অনুমোদিত শিক্ষার্থীরা প্রবেশ করতে পারবে।
+</p>
+
+<label>
+Student ID
+</label>
+
+<input
+id="studentID"
+type="text"
+placeholder="যেমন: HVA001"
+>
+
+<label>
+Password
+</label>
+
+<input
+id="studentPassword"
+type="password"
+placeholder="Password"
+>
+
+<button onclick="studentLogin()">
+LOGIN
+</button>
+
+<div id="loginMessage"></div>
+
+</div>
+
+</section>
+
+
+<!-- DASHBOARD -->
+
+<section id="dashboard">
+
+<div class="dashboard-box">
+
+<div class="student-info">
+
+<h2>
+🎓 Student Dashboard
+</h2>
+
+<p>
+স্বাগতম, <strong id="studentName"></strong>
+</p>
+
+<p>
+Student ID:
+<strong id="studentIDShow"></strong>
+</p>
+
+</div>
+
+
+<div class="dashboard-cards">
+
+<div class="dashboard-card">
+
+<h3>👤 আমার প্রোফাইল</h3>
+
+<p>
+Student ID:
+<span id="profileID"></span>
+</p>
+
+<p>
+Class: দশম
+</p>
+
+</div>
+
+
+<div class="dashboard-card">
+
+<h3>📊 আমার ফলাফল</h3>
+
+<p>
+তোমার পরীক্ষার ফলাফল এখানে প্রকাশ করা হবে।
+</p>
+
+</div>
+
+
+<div class="dashboard-card">
+
+<h3>📅 আমার রুটিন</h3>
+
+<p>
+তোমার ক্লাস রুটিন এখানে প্রকাশ করা হবে।
+</p>
+
+</div>
+
+
+<div class="dashboard-card">
+
+<h3>📢 Student Notice</h3>
+
+<p>
+শিক্ষার্থীদের জন্য বিশেষ নোটিশ এখানে থাকবে।
+</p>
+
+</div>
+
+
+<div class="dashboard-card">
+
+<h3>📚 Study Materials</h3>
+
+<p>
+PDF ও অন্যান্য শিক্ষাসামগ্রী এখানে দেওয়া যাবে।
+</p>
+
+</div>
+
+
+<div class="dashboard-card">
+
+<h3>🚪 Logout</h3>
+
+<button class="logout" onclick="logout()">
+Logout
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<h2 class="title">
+📞 যোগাযোগ
+</h2>
+
+<div class="card">
+
+<p>
+<strong>বিদ্যালয়ের নাম:</strong>
+হরিনহাটি আদর্শ বিদ্যানিকেতন
+</p>
+
+<p>
+<strong>ঠিকানা:</strong>
+হরিনহাটি, বাংলাদেশ
+</p>
+
+<p>
+<strong>ফোন:</strong>
+01XXXXXXXXX
+</p>
+
+<p>
+<strong>Email:</strong>
+school@example.com
+</p>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+© 2026 হরিনহাটি আদর্শ বিদ্যানিকেতন
+</p>
+
+<p>
+সর্বস্বত্ব সংরক্ষিত
+</p>
+
+</footer>
+
+
+<script>
+
+/*
+====================================================
+DEMO STUDENT ACCOUNTS
+====================================================
+
+এখানে শুধু উদাহরণ হিসেবে ৩টি account দেওয়া হয়েছে।
+
+HVA001 / 123456
+HVA002 / 123456
+HVA003 / 123456
+
+গুরুত্বপূর্ণ:
+এটি DEMO LOGIN।
+Production website-এর জন্য Firebase Authentication ব্যবহার করুন।
+====================================================
+*/
+
+const students = {
+
+    "HVA001":{
+        password:"123456",
+        name:"Student 001"
+    },
+
+    "HVA002":{
+        password:"123456",
+        name:"Student 002"
+    },
+
+    "HVA003":{
+        password:"123456",
+        name:"Student 003"
+    }
+
+};
+
+
+function studentLogin(){
+
+    let id =
+        document.getElementById("studentID")
+        .value
+        .trim()
+        .toUpperCase();
+
+    let password =
+        document.getElementById("studentPassword")
+        .value;
+
+    let message =
+        document.getElementById("loginMessage");
+
+
+    if(id === "" || password === ""){
+
+        message.className="error";
+
+        message.innerHTML=
+        "⚠️ Student ID এবং Password দিন।";
+
+        return;
+    }
+
+
+    if(
+        students[id] &&
+        students[id].password === password
+    ){
+
+        message.className="success";
+
+        message.innerHTML=
+        "✅ Login সফল হয়েছে।";
+
+
+        document.getElementById("studentName")
+        .innerText=students[id].name;
+
+
+        document.getElementById("studentIDShow")
+        .innerText=id;
+
+
+        document.getElementById("profileID")
+        .innerText=id;
+
+
+        document.getElementById("dashboard")
+        .style.display="block";
+
+
+        document.getElementById("dashboard")
+        .scrollIntoView({
+            behavior:"smooth"
+        });
+
+    }
+
+    else{
+
+        message.className="error";
+
+        message.innerHTML=
+        "❌ Student ID অথবা Password ভুল।";
+
+    }
+
+}
+
+
+function logout(){
+
+    document.getElementById("dashboard")
+    .style.display="none";
+
+
+    document.getElementById("studentID")
+    .value="";
+
+
+    document.getElementById("studentPassword")
+    .value="";
+
+
+    document.getElementById("login")
+    .scrollIntoView({
+        behavior:"smooth"
+    });
+
+}
+
+</script>
+
+</body>
+  </html>
