@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>হরিণহাটী আদর্শ বিদ্যানিকেতন - Harinhati Adorsho Bidyaniketan</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Kalpurush&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #006633;
+            --secondary-color: #f39c12;
+            --accent-color: #e74c3c;
+            --dark-color: #2c3e50;
+            --light-bg: #f8f9fa;
+            --white: #ffffff;
+            --text-color: #333333;
+            --border-color: #e0e0e0;
+            --box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', 'Kalpurush', sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Top Header */
+        .top-header {
+            background: var(--dark-color);
+            color: var(--white);
+            padding: 8px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+        }
+
+        .top-info span {
+            margin-right: 15px;
+        }
+
+        .top-info i {
+            color: var(--secondary-color);
+            margin-right: 5px;
+        }
+
+        .social-icons a {
+            color: var(--white);
+            margin-left: 10px;
+            transition: var(--transition);
+        }
+
+        .social-icons a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Main Header & Logo */
+        header {
+            background: var(--white);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: var(--box-shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            border: 3px solid var(--secondary-color);
+        }
+
+        .school-title h1 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .school-title p {
+            color: #666;
+            font-size: 0.85rem;
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+        }
+
+        .nav-links li a {
+            color: var(--white);
+            text-decoration: none;
+            padding: 12px 20px;
+            display: block;
+            font-weight: 500;
+            transition: var(--transition);
+            font-size: 0.95rem;
+        }
+
+        .nav-links li a:hover, .nav-links li a.active {
+            background: var(--secondary-color);
+            color: var(--dark-color);
+        }
+
+        /* Ticker / Notice Board */
+        .ticker-container {
+            background: #fff;
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid var(--secondary-color);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .ticker-title {
+            background: var(--accent-color);
+            color: white;
+            padding: 8px 15px;
+            font-weight: bold;
+            white-space: nowrap;
+            font-size: 0.9rem;
+        }
+
+        marquee {
+            padding: 5px 0;
+            color: var(--dark-color);
+            font-weight: 500;
+        }
+
+        /* Main Layout */
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 15px;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 20px;
+        }
+
+        /* Banner Slider */
+        .slider-container {
+            width: 100%;
+            height: 380px;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: var(--box-shadow);
+            margin-bottom: 25px;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .slide-caption {
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            width: 100%;
+            padding: 15px;
+            backdrop-filter: blur(3px);
+        }
+
+        /* Feature Cards */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: var(--box-shadow);
+            border-top: 4px solid var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-card i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            color: var(--dark-color);
+        }
+
+        /* Content Boxes */
+        .content-box {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: var(--box-shadow);
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+            font-size: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Sidebar Styles */
+        .sidebar .content-box {
+            border-top: 4px solid var(--secondary-color);
+        }
+
+        .headmaster-img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border: 1px solid var(--border-color);
+        }
+
+        .notice-list {
+            list-style: none;
+        }
+
+        .notice-list li {
+            padding: 10px 0;
+            border-bottom: 1px dashed var(--border-color);
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+        }
+
+        .notice-list li:last-child {
+            border-bottom: none;
+        }
+
+        .notice-date {
+            background: var(--primary-color);
+            color: white;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            white-space: nowrap;
+        }
+
+        .notice-list a {
+            color: var(--dark-color);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .notice-list a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 40px 5% 10px 5%;
+            margin-top: 40px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-col h3 {
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+            border-bottom: 1px solid #444;
+            padding-bottom: 5px;
+        }
+
+        .footer-col p, .footer-col ul li {
+            font-size: 0.9rem;
+            color: #ccc;
+            margin-bottom: 8px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #444;
+            padding-top: 15px;
+            margin-top: 30px;
+            font-size: 0.85rem;
+            color: #aaa;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            .logo-container {
+                flex-direction: column;
+                margin-bottom: 10px;
+            }
+            .container {
+                grid-template-columns: 1fr;
+            }
+            .nav-links {
+                flex-wrap: wrap;
+            }
+            .nav-links li a {
+                padding: 8px 12px;
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Header Bar -->
+    <div class="top-header">
+        <div class="top-info">
+            <span><i class="fas fa-phone"></i> +৮৮০ ১৭০০-০০০০০</span>
+            <span><i class="fas fa-envelope"></i> info@harinhati-school.edu.bd</span>
+            <span><i class="fas fa-code-branch"></i> EIIN: ১২৩৪৫৬</span>
+        </div>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header>
+        <div class="logo-container">
+            <div class="logo-img">
+                <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="school-title">
+                <h1>হরিণহাটী আদর্শ বিদ্যানিকেতন</h1>
+                <p>Harinhati Adorsho Bidyaniketan (Est: 1995)</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#" class="active"><i class="fas fa-home"></i> প্রচ্ছদ</a></li>
+            <li><a href="#"><i class="fas fa-info-circle"></i> আমাদের কথা</a></li>
+            <li><a href="#"><i class="fas fa-user-tie"></i> শিক্ষকবৃন্দ</a></li>
+            <li><a href="#"><i class="fas fa-bullhorn"></i> নোটিশ বোর্ড</a></li>
+            <li><a href="#"><i class="fas fa-images"></i> গ্যালারি</a></li>
+            <li><a href="#"><i class="fas fa-envelope"></i> যোগাযোগ</a></li>
+        </ul>
+    </nav>
+
+    <!-- Marquee Notice Ticker -->
+    <div class="ticker-container">
+        <div class="ticker-title"><i class="fas fa-bell"></i> জরুরি নোটিশ:</div>
+        <marquee onmouseover="this.stop();" onmouseout="this.start();">
+            *** হরিণহাটী আদর্শ বিদ্যানিকেতনে ২০২৪ শিক্ষাবর্ষে ভর্তি চলছে! *** আগামী ১৫ই অক্টোবর বার্ষিক ক্রীড়া প্রতিযোগিতা অনুষ্ঠিত হবে। ***
+        </marquee>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="container">
+        
+        <!-- Left Main Content Section -->
+        <main class="main-content">
+            
+            <!-- Banner / Hero Slider -->
+            <div class="slider-container">
+                <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.7)), url('https://picsum.photos/800/400?education');">
+                    <div class="slide-caption">
+                        <h2>সুশিক্ষাই জাতির মেরুদণ্ড</h2>
+                        <p>গুণগত মানসম্মত শিক্ষা প্রদানই আমাদের মূল লক্ষ্য।</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features Cards Grid -->
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>কম্পিউটার ল্যাব</h3>
+                    <p>আধুনিক আইসিটি ল্যাব সুবিধা।</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-book-reader"></i>
+                    <h3>সমৃদ্ধ পাঠাগার</h3>
+                    <p>হাজারো বইয়ের বিশাল সংগ্রহ।</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-flask"></i>
+                    <h3>বিজ্ঞানাগার</h3>
+                    <p>ব্যবহারিক শিক্ষার চমৎকার পরিবেশ।</p>
+                </div>
+            </div>
+
+            <!-- Welcome Text Box -->
+            <div class="content-box">
+                <h2 class="section-title"><i class="fas fa-school"></i> বিদ্যালয়ে স্বাগতম</h2>
+                <p>হরিণহাটী আদর্শ বিদ্যানিকেতনে আপনাকে স্বাগতম। ১৯৯৫ সালে প্রতিষ্ঠিত এই প্রতিষ্ঠানটি এলাকার শিক্ষার আলো ছড়িয়ে দিতে নিরলসভাবে কাজ করে যাচ্ছে। আমাদের লক্ষ্য কেবল প্রাতিষ্ঠানিক শিক্ষাই নয়, বরং শিক্ষার্থীদের নীতি-নৈতিকতা ও চারিত্রিক উৎকর্ষ সাধনের মাধ্যমে সুনাগরিক হিসেবে গড়ে তোলা।</p>
+            </div>
+
+        </main>
+
+        <!-- Right Sidebar Section -->
+        <aside class="sidebar">
+            
+            <!-- Headmaster Message Box -->
+            <div class="content-box">
+                <h3 class="section-title"><i class="fas fa-user-graduate"></i> প্রধান শিক্ষক</h3>
+                <img src="https://picsum.photos/200/200?person" alt="প্রধান শিক্ষক" class="headmaster-img">
+                <h4 style="color: var(--primary-color);">মোঃ আব্দুর রহমান</h4>
+                <p style="font-size: 0.85rem; color: #555; margin-top: 5px;">
+                    "শিক্ষার্থীদের সুপ্ত প্রতিভার বিকাশ ঘটিয়ে তাদের ভবিষ্যৎ পৃথিবীর উপযোগী করে তোলাই আমাদের মূল উদ্দেশ্য।"
+                </p>
+            </div>
+
+            <!-- Notice List Box -->
+            <div class="content-box">
+                <h3 class="section-title"><i class="fas fa-clipboard-list"></i> সাম্প্রতিক নোটিশ</h3>
+                <ul class="notice-list">
+                    <li>
+                        <span class="notice-date">১০ সেপ</span>
+                        <a href="#">বার্ষিক পরীক্ষা ২০২৪ এর সময়সূচি প্রকাশ।</a>
+                    </li>
+                    <li>
+                        <span class="notice-date">০৫ সেপ</span>
+                        <a href="#">অভিভাবক সমাবেশ সংক্রান্ত বিজ্ঞপ্তি।</a>
+                    </li>
+                    <li>
+                        <span class="notice-date">০১ সেপ</span>
+                        <a href="#">নতুন শিক্ষাবর্ষের ভর্তি ফরম বিতরণ।</a>
+                    </li>
+                </ul>
+            </div>
+
+        </aside>
+
+    </div>
+
+    <!-- Footer Area -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>যোগাযোগ</h3>
+                <p><i class="fas fa-map-marker-alt"></i> হরিণহাটী, ডাকঘর: হরিণহাটী, থানা: সদর</p>
+                <p><i class="fas fa-phone"></i> +৮৮০ ১৭০০-০০০০০</p>
+                <p><i class="fas fa-envelope"></i> info@harinhati-school.edu.bd</p>
+            </div>
+            <div class="footer-col">
+                <h3>গুরুত্বপূর্ণ লিঙ্ক</h3>
+                <ul>
+                    <li><a href="#">শিক্ষা মন্ত্রণালয়</a></li>
+                    <li><a href="#">মাধ্যমিক ও উচ্চশিক্ষা অধিদপ্তর</a></li>
+                    <li><a href="#">মাধ্যমিক ও উচ্চমাধ্যমিক শিক্ষা বোর্ড</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>অবস্থান</h3>
+                <p>বিদ্যালয় প্রাঙ্গণে আসার জন্য মানচিত্র ব্যবহার করুন অথবা সরাসরি যোগাযোগ করুন।</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; ২০২৪ হরিণহাটী আদর্শ বিদ্যানিকেতন। সর্বস্বত্ব সংরক্ষিত।</p>
+        </div>
+    </footer>
+
+</body>
+  </html>
+  
