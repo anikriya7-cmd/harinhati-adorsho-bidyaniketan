@@ -13,7 +13,7 @@
 .hero{min-height:490px;display:grid;place-items:center;text-align:center;color:#fff;padding:50px 7%;background:linear-gradient(90deg,#032c5bdd,#073b7899),url("https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1800&q=85") center/cover}.hero h2{font-size:46px;margin:0 0 12px}.hero p{max-width:820px;font-size:19px;margin:auto}.btn{display:inline-block;border:0;border-radius:7px;padding:11px 18px;background:var(--green);color:#fff;font-weight:700;cursor:pointer;margin:7px 3px}.btn.alt{background:#fff;color:var(--nav)}.btn.danger{background:var(--danger)}
 section{padding:58px 6%}.title{text-align:center;color:var(--nav);margin:0 0 30px}.title:after{content:"";display:block;width:65px;height:4px;background:var(--green);margin:8px auto}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{background:#fff;border-radius:13px;padding:23px;box-shadow:0 4px 18px #0000000d}.card h3{color:var(--nav);margin-top:0}.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;background:var(--nav);color:#fff;padding:35px 6%;text-align:center}.facts strong{display:block;font-size:31px}.notice-table{width:100%;border-collapse:collapse;background:#fff;border-radius:10px;overflow:hidden}.notice-table th,.notice-table td{padding:12px;border-bottom:1px solid var(--line);text-align:left}.notice-table th{background:var(--nav);color:#fff}.principal{max-width:1050px;margin:auto;display:grid;grid-template-columns:210px 1fr;gap:30px;align-items:center}.photo{height:240px;border-radius:13px;background:#e7ecf2;display:grid;place-items:center;color:#667085;text-align:center}.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.gallery div{height:180px;border-radius:10px;background:#dce4ed center/cover}.g1{background-image:url("https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=800&q=85")}.g2{background-image:url("https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=800&q=85")}.g3{background-image:url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=800&q=85")}.g4{background-image:url("https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=800&q=85")}
 .auth{background:#eaf2fa}.box{max-width:460px;margin:auto;background:#fff;padding:28px;border-radius:14px;box-shadow:0 7px 25px #0002}.box input,.admin input,.admin textarea,.admin select{width:100%;padding:12px;border:1px solid #ccd5df;border-radius:7px;margin:6px 0 13px}.msg{display:none;padding:10px;border-radius:7px;margin-top:10px}.ok{background:#e7fff1;color:#087443}.err{background:#ffe8e8;color:#a00000}
-#dashboard,#adminPanel{display:none}.dashHead{background:linear-gradient(110deg,var(--nav),#0a719f);color:#fff;padding:25px;border-radius:14px;margin-bottom:20px}.dashgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.dashcard{background:#fff;border-radius:12px;padding:21px;box-shadow:0 3px 15px #0001}.dashcard h3{color:var(--nav)}.profileLine{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding:7px 0}
+#dashboard,#adminPanel{display:none}.dashHead{background:linear-gradient(110deg,var(--nav),#0a719f);color:#fff;padding:25px;border-radius:14px;margin-bottom:20px}.dashgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.dashcard{background:#fff;border-radius:12px;padding:21px;box-shadow:0 3px 15px #0001}.dashcard h3{color:var(--nav)}.profileLine{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding:7px 0}.studentProfile{display:flex;gap:20px;align-items:center;flex-wrap:wrap}.studentPhoto{width:150px;height:180px;object-fit:cover;border-radius:14px;border:4px solid #fff;box-shadow:0 4px 16px #0002}.studentInfo{flex:1;min-width:220px}
 .adminWrap{max-width:1000px;margin:auto}.adminTools{display:grid;grid-template-columns:1fr 1fr;gap:15px}.adminList{padding:0}.adminList li{list-style:none;background:#f5f7fb;margin:8px 0;padding:10px;border-radius:7px;display:flex;justify-content:space-between;gap:10px}
 footer{background:var(--nav2);color:#fff;padding:38px 6%}.footgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:25px}.copy{text-align:center;border-top:1px solid #ffffff33;padding-top:15px;margin-top:25px}
 @media(max-width:850px){.header{align-items:flex-start}.nav{max-width:480px}.grid3,.dashgrid{grid-template-columns:1fr 1fr}.gallery{grid-template-columns:1fr 1fr}.facts{grid-template-columns:1fr 1fr}.principal{grid-template-columns:1fr}.footgrid{grid-template-columns:1fr}}
@@ -49,9 +49,18 @@ footer{background:var(--nav2);color:#fff;padding:38px 6%}.footgrid{display:grid;
 
 <section id="gallery"><h2 class="title">🏫 Campus & Gallery</h2><div class="gallery"><div class="g1"></div><div class="g2"></div><div class="g3"></div><div class="g4"></div></div></section>
 
-<section class="auth" id="login"><h2 class="title">🔐 Student Login</h2><div class="box"><label>Student ID</label><input id="sid" placeholder="যেমন: HVA001"><label>Password</label><input id="spass" type="password" placeholder="Password"><button class="btn" style="width:100%" onclick="login()">LOGIN</button><div id="loginMsg" class="msg"></div><p style="font-size:12px;color:#667085">Demo: HVA001 / 123456</p></div></section>
+<section class="auth" id="login"><h2 class="title">🔐 Student Login</h2><div class="box"><label>Student ID</label><input id="sid" placeholder="220070135"><label>Password</label><input id="spass" type="password" placeholder="Password"><button class="btn" style="width:100%" onclick="login()">LOGIN</button><div id="loginMsg" class="msg"></div><p style="font-size:12px;color:#667085">Demo Student Login: 220070135 / 220070135</p></div></section>
 
-<section id="dashboard"><div class="dashHead"><h2>🎓 Student Dashboard</h2><p>স্বাগতম, <b id="dName"></b> | ID: <b id="dId"></b></p></div><div class="dashgrid">
+<section id="dashboard"><div class="dashHead"><h2>🎓 Student Dashboard</h2><p>স্বাগতম, <b id="dName"></b> | Username: <b id="dId"></b></p></div>
+<div class="card studentProfile" style="margin-bottom:20px">
+<img class="studentPhoto" src="1000035349.jpg" alt="Student Photo">
+<div class="studentInfo">
+<h2 style="margin-top:0;color:var(--nav)">Student Profile</h2>
+<div class="profileLine"><span>Name</span><b id="profileName">ANIK</b></div>
+<div class="profileLine"><span>Class</span><b id="profileClass">10</b></div>
+<div class="profileLine"><span>Section</span><b id="profileSection">A</b></div>
+<div class="profileLine"><span>Username</span><b id="profileUsername">220070135</b></div>
+</div></div><div class="dashgrid">
 <div class="dashcard"><h3>👤 My Profile</h3><div class="profileLine"><span>ID</span><b id="pId"></b></div><div class="profileLine"><span>Class</span><b id="pClass"></b></div><div class="profileLine"><span>Roll</span><b id="pRoll"></b></div></div>
 <div class="dashcard"><h3>📊 My Result</h3><p>ফলাফল প্রকাশ হলে এখানে দেখাবে।</p></div><div class="dashcard"><h3>📅 My Routine</h3><p>তোমার ক্লাস রুটিন এখানে থাকবে।</p></div><div class="dashcard"><h3>📢 Student Notice</h3><p>শিক্ষার্থীদের জন্য ব্যক্তিগত নোটিশ।</p></div><div class="dashcard"><h3>📚 Study Materials</h3><p>PDF ও নোটের তালিকা এখানে রাখা যাবে।</p></div><div class="dashcard"><h3>🚪 Logout</h3><button class="btn danger" style="width:100%" onclick="logout()">Logout</button></div>
 </div></section>
@@ -69,9 +78,7 @@ const SCHOOL={name:"হরিনহাটি আদর্শ বিদ্যা�
 
 /* ===== DEMO STUDENTS: REAL SCHOOL-USE-এর জন্য Firebase Authentication ব্যবহার করো ===== */
 const students={
- HVA001:{password:"123456",name:"Student 001",class:"দশম",roll:"001"},
- HVA002:{password:"123456",name:"Student 002",class:"দশম",roll:"002"},
- HVA003:{password:"123456",name:"Student 003",class:"নবম",roll:"003"}
+ "220070135":{password:"220070135",name:"ANIK",class:"10",section:"A",username:"220070135",roll:"220070135"}
 };
 
 let notices=JSON.parse(localStorage.getItem("hns_notices")||"null")||[
@@ -92,7 +99,9 @@ function esc(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",
 function login(){
  const id=$("sid").value.trim().toUpperCase(),pass=$("spass").value,m=$("loginMsg"),s=students[id];
  if(s&&s.password===pass){
-  $("dName").textContent=s.name;$("dId").textContent=id;$("pId").textContent=id;$("pClass").textContent=s.class;$("pRoll").textContent=s.roll;
+  $("dName").textContent=s.name;$("dId").textContent=s.username;
+$("profileName").textContent=s.name;$("profileClass").textContent=s.class;$("profileSection").textContent=s.section;$("profileUsername").textContent=s.username;
+$("pId").textContent=s.username;$("pClass").textContent=s.class;$("pRoll").textContent=s.roll;
   $("dashboard").style.display="block";m.className="msg ok";m.style.display="block";m.textContent="Login সফল হয়েছে।";$("dashboard").scrollIntoView({behavior:"smooth"});
  }else{m.className="msg err";m.style.display="block";m.textContent="Student ID অথবা Password সঠিক নয়।"}
 }
